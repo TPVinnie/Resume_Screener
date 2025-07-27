@@ -1,0 +1,10 @@
+#!/Users/dr.techo/Documents/DOCUMENTS_2022/EDUCATION/COMPUTER_SCIENCE/Edureka/AgenticAI/3_Langchain+ RAG/2_Demo_Resume APP/.venv1/bin/python3.12
+
+import docx2txt
+
+if __name__ == '__main__':
+    import sys
+    args = docx2txt.process_args()
+    text = docx2txt.process(args.docx, args.img_dir)
+    output = getattr(sys.stdout, 'buffer', sys.stdout)
+    output.write(text.encode('utf-8'))
